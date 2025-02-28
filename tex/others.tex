@@ -1,0 +1,31 @@
+\setlength{\emergencystretch}{3em} % Prevent overfull lines
+%\setcounter{secnumdepth}{-\maxdimen} % Remove section numbering
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
+
+\clubpenalty10000
+\widowpenalty10000
+\displaywidowpenalty10000
+
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+\urlstyle{same} % disable monospaced font for URLs
+
+% -----
+% Custom functions
+% -----
+
+% Credits: <https://tex.stackexchange.com/a/300215/234832>.
+
+\usepackage{xparse}
+
+\ExplSyntaxOn
+\NewExpandableDocumentCommand{\repeatntimes}{O{}mm}
+ {
+  \int_compare:nT { #2 > 0 }
+   {
+    #3 \prg_replicate:nn { #2 - 1 } { #1#3 }
+   }
+ }
+\ExplSyntaxOff

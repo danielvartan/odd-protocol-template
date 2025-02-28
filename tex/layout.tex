@@ -1,0 +1,48 @@
+% Set page -----
+
+\setlength{\headsep}{1cm}
+\setlength{\footskip}{1cm}
+\checkandfixthelayout[fixed]
+
+% Set text spacing -----
+
+\renewcommand{\familydefault}{\rmdefault}
+\renewcommand{\baselinestretch}{1.5}
+\setlength{\parindent}{1cm}
+\setlength{\parskip}{0ex}
+
+% Set text font -----
+
+\setmainfont{poppins}[
+  Path=./ttf/,
+  Scale=1,
+  Extension = .ttf,
+  UprightFont=*-medium,
+  BoldFont=*-bold,
+  ItalicFont=*-mediumitalic,
+  BoldItalicFont=*-bolditalic
+]
+
+\setsansfont{poppins}[
+  Path=./ttf/,
+  Scale=1,
+  Extension = .ttf,
+  UprightFont=*-medium,
+  BoldFont=*-bold,
+  ItalicFont=*-mediumitalic,
+  BoldItalicFont=*-bolditalic
+]
+
+\setmonofont{dmmono}[
+  Path=./ttf/,
+  Scale=0.75,
+  Extension = .ttf,
+  UprightFont=*-medium,
+  ItalicFont=*-mediumitalic
+]
+
+% Set footnote -----
+
+\setlength{\footnotemargin}{0.5em} % Equal to `\footmarkwidth`
+\let\svfootnoterule\footnoterule % Equal to `\footmarksep`
+\renewcommand\footnoterule{\vspace{1ex}\svfootnoterule\vspace{1ex}}

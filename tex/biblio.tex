@@ -1,0 +1,40 @@
+\usepackage[
+    style=apa,
+    backend=biber,
+    language=english,
+    url=true,
+    useprefix=false,
+    giveninits=true
+]{biblatex}
+
+\usepackage{csquotes}
+
+\addbibresource{references.bib}
+\renewcommand{\bibname}{REFERENCES}
+\newcommand{\newbibname}{REFERENCES}
+
+\newcommand{\bibnamewithfootnote}{
+    \newbibname\protect\footnote{
+        In accordance with the American Psychological Association (APA) Style, 7th edition.
+    }
+}
+
+\setlength{\bibhang}{0.5cm}
+\setlength{\bibparsep}{1ex}
+
+
+\defbibheading{bibheading}[\bibnamewithfootnote]{
+  \ifthenelse{\boolean{ABNTEXupperchapter}}{
+    \setboolean{ABNTEXupperchapter}{false}
+    \chapter*{#1}
+    \markboth{#1}{#1}
+    \setboolean{ABNTEXupperchapter}{true}
+  }{
+    \chapter*{#1}
+    \markboth{#1}{#1}
+  }
+}
+
+\AtBeginBibliography{\vspace{0.5\baselineskip}}
+\AtEveryBibitem{\clearfield{annotation}}
+\renewcommand{\bibfont}{\ABNTEXfontereduzida}

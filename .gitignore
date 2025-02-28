@@ -1,0 +1,13 @@
+# See: https://git-scm.com/docs/gitignore
+
+index.aux*
+index.bcf*
+index.bbl*
+index.blg*
+index.dvi*
+index.fdb_latexmk*
+index.fls*
+index.log*
+index.run.xml*
+index.synctex.gz*
+index.toc*

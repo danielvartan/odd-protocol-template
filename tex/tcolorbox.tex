@@ -1,0 +1,53 @@
+\newcommand{\arrowbullet}[1][]{
+  \begin{tikzpicture}[#1]
+    \draw[-{Triangle[width=6.75pt,length=3pt]},
+    line width=3pt](0,0) -- (0.3, 0);
+  \end{tikzpicture}
+}
+
+\newcommand{\infoicon}[1][]{
+\begin{tikzpicture}[#1]
+  \draw[line width=1.5pt] (0,0) circle(0.2cm);
+  \node at (0,0) {\fontsize{8pt}{8pt}\selectfont\textbf{i}};
+\end{tikzpicture}
+}
+
+\newlist{tcbitemize}{itemize}{1}
+\setlist[tcbitemize]{
+  leftmargin=0.6cm,
+  % parsep=0pt,
+  labelsep=0.1cm,
+  itemsep=0pt
+}
+\setlist[tcbitemize,1]{label=\arrowbullet}
+
+\tcbset{
+  skin=enhanced,
+  colframe=gdlightgreyc,
+  colback=white,
+  borderline west={3pt}{0pt}{gdblack},
+  % opacityback=0,
+  sharp corners,
+  boxrule=0.5pt,
+  boxsep=0cm,
+  left=0.3cm,
+  right=0.3cm,
+  top=0.3cm,
+  bottom=0.3cm,
+  fontupper=\linespread{1.15}\selectfont,
+  halign=justify,
+  before skip={\medskipamount},
+  after skip={\medskipamount},
+  before upper={
+    \begingroup
+      \hypersetup{hidelinks}
+      \begin{tabular}{m{0.75cm}l}
+        \gdblack{\infoicon} &
+        \begin{minipage}{13.75cm}
+  },
+  after upper={
+        \end{minipage}
+      \end{tabular}
+    \endgroup
+  }
+}

@@ -1,5 +1,5 @@
-% Author: Daniel Vartanian.
-% Version: 0.1.0 2025-02-27.
+% Author: Daniel Vartanian
+% Version: 0.0.0.9000 2025-02-27
 % Licence: The LaTeX Project Public License 1.3c.
 %   See <http://www.latex-project.org/lppl.txt> to learn
 %   more.
@@ -25,19 +25,21 @@
 \input{tex/abntex2.tex}
 \input{tex/colors.tex}
 \input{tex/graphics.tex}
+\input{tex/tables.tex}
 \input{tex/tightlist.tex}
 \input{tex/def.tex}
 \input{tex/hypersetup.tex}
 \input{tex/toc.tex}
 \input{tex/biblio.tex}
 %\input{tex/index.tex}
+\input{tex/tcolorbox.tex}
 \input{tex/others.tex}
 
 % Title
 \titulo{ODD Protocol}
 
 % Year (yyyy)
-\data{[Date]}
+\data{[YEAR]}
 
 % Location (e.g., city)
 \local{[LOCATION]}
@@ -86,50 +88,69 @@
 
 \subsubsubsection{Heading 5}
 
-To enhance clarity, the \textbf{guiding questions} and corresponding answers are presented at the beginning of each section and are \cbred{\textbf{color}}-\cbgreen{\textbf{coded}} for ease of reference. A visual and summarized version of the protocol is provided in Figure 1.1.
+This template was developed to facilitate the use of the ODD protocol in technical and academic writing. It is based on the \href{https://github.com/abntex/abntex2}{ABNTeX2} class and follows the formatting guidelines of the Brazilian Association of Technical Standards (\href{https://www.abnt.org.br/}{ABNT}). References are formatted according to the American Psychological Association (\href{https://apastyle.apa.org/}{APA}) standard.
 
-Morbi fringilla convallis sapien, id pulvinar odio volutpat. Hi omnes lingua, institutis, legibus inter se differunt. Non equidem invideo, miror magis posuere velit aliquet. Quid securi etiam tamquam eu fugiat nulla pariatur. Inmensae subtilitatis, obscuris et malesuada fames. Fictum, deserunt mollit anim laborum astutumque \autocite{grimm2020}!
+To enhance clarity, \textbf{guiding questions} are presented at the beginning of each section, with \cbred{\textbf{color}}-\cbgreen{\textbf{coding}} for easy reference. These questions were drawn from \autocite{grimm2020}, \autocite{grimm2010}, and \autocite{railsback2019a}.
 
-Morbi fringilla convallis sapien, id pulvinar odio volutpat. Hi omnes lingua, institutis, legibus inter se differunt. Non equidem invideo, miror magis posuere velit aliquet. Quid securi etiam tamquam eu fugiat nulla pariatur. Inmensae subtilitatis, obscuris et malesuada fames. Fictum, deserunt mollit anim laborum astutumque \autocite{grimm2005b}!
+Additionally, the template includes placeholder texts with examples from \autocite{grimm2020} to further assist users.
+
+A visual and summarized version of the protocol, known as \textit{Visual ODD} \autocite{szangolies2024}, is provided in Figure 1.1.
+
+To maintain the template's general applicability, some questions from the extended ODD+D version proposed by \autocite{muller2013} were not included. These omitted questions can be found in the appendix.
 
 
 \chapter{Overview (O)}
 
 \section{Purpose and Patterns}
 
-% \faInfo
-% \faInfoCircle
-
-% \begingroup
-%   \setlength{\parindent}{0cm}
-%   \renewcommand{\baselinestretch}{1.15}
-%   \normalsize
-%   \begin{tabular}{ ?m{1cm} m{7cm} | }
-%     \hline
-%     \center\faInfoCircle &
-%     \begin{itemize}
-%       \item 1
-%       \item 2
-%     \end{itemize} \\
-%     \hline
-%   \end{tabular}
-%  \endgroup
-
-%  \item What is the purpose of the study? \autocite{grimm2010,grimm2020}
-%  \item For whom is the model designed? \autocite{muller2013}
-%  \item What pattern are used as criteria for evaluating the model's suitability for its purpose? \autocite{grimm2020}
+\begin{tcolorbox}
+  \begin{tcbitemize}
+    \item[\gdred{\arrowbullet}] \gdred{\textbf{What is the purpose of the study?} \autocite{grimm2010,grimm2020}}
+    \item[\gdblue{\arrowbullet}] \gdblue{\textbf{For whom is the model designed?} \autocite{muller2013}}
+    \item[\gdgreen{\arrowbullet}] \gdgreen{\textbf{What pattern are used as criteria for evaluating the model's suitability for its purpose?} \autocite{grimm2020}}
+  \end{tcbitemize}
+\end{tcolorbox}
 
 \cbred{Lorem ipsum dolor sit amet, \textbf{consectetur adipisici} elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Me non paenitet nullum festiviorem excogitasse ad hoc}. \cbblue{Ambitioni \underline{dedisse} scripsisse iudicaretur. Unam incolunt Belgae, aliam Aquitani, tertiam.} \cbgreen{Morbi fringilla convallis sapien, \textit{id pulvinar odio volutpat. A communi observantia} non est recedendum \autocite{grimm2005a}.}
 
 \section{Entities, State Variables, and Scales}
 
+\begin{tcolorbox}
+  \begin{tcbitemize}
+    \item[\gdred{\arrowbullet}] \gdred{\textbf{What kinds of entities are in the model and what they represent?} \autocite{grimm2010,grimm2020}}
+    \item[\gdblue{\arrowbullet}] \gdblue{\textbf{By what attributes (i.e., state variables and parameters) are these entities characterized?} \autocite{grimm2010}}
+    \item[\gdgreen{\arrowbullet}] \gdgreen{\textbf{Why those entities were included and, if relevant, why other entities were not included?} \autocite{grimm2020}}
+    \item[\gdpurple{\arrowbullet}] \gdpurple{\textbf{What are the temporal and spatial resolutions (e.g. discrete, continuous, or both) (what measure?) and extents of the model? Why they were chosen?} \autocite{grimm2010,grimm2020}}
+    \item[\gdorange{\arrowbullet}] \gdorange{\textbf{Are there any other dimensions represented? How?} \autocite{grimm2020}}
+  \end{tcbitemize}
+\end{tcolorbox}
+
 Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi \autocite{grimm2006a}.
 
 \section{Process Overview and Scheduling}
 
+\begin{tcolorbox}
+  \begin{tcbitemize}
+    \item[\gdred{\arrowbullet}] \gdred{\textbf{What entity does what, and in what order?} \autocite{grimm2010,grimm2020}}
+    \item[\gdblue{\arrowbullet}] \gdblue{\textbf{When are state variables updated?} \autocite{grimm2010}}
+    \item[\gdgreen{\arrowbullet}] \gdgreen{\textbf{How is time modeled, as discrete steps or as a continuum over which both continuous processes and discrete events can occur?} \autocite{grimm2010}}
+  \end{tcbitemize}
+\end{tcolorbox}
+
 Phasellus laoreet lorem vel dolor tempus vehicula. Idque Caesaris facere voluntate liceret: sese habere. Ab illo tempore, ab est sed immemorabili. Mercedem aut nummos unde unde extricat, amaras. Praeterea iter est quasdam res quas ex communi \autocite{grimm2010}.
 
+
 \chapter{Design Concepts (O)}
+
+\begin{tcolorbox}
+  \begin{tcbitemize}
+    \item[\gdred{\arrowbullet}] \gdred{\textbf{Which general concepts, theories, hypotheses, or modeling approaches are underlying the model’s design? How is the model related to previous thinking about the problem it addresses?} \autocite{grimm2010,grimm2020}}
+    \item[\gdblue{\arrowbullet}] \gdblue{\textbf{By what attributes (i.e., state variables and parameters) are these entities characterized?} \autocite{grimm2010}}
+    \item[\gdgreen{\arrowbullet}] \gdgreen{\textbf{Why those entities were included and, if relevant, why other entities were not included?} \autocite{grimm2020}}
+    \item[\gdpurple{\arrowbullet}] \gdpurple{\textbf{What are the temporal and spatial resolutions (e.g. discrete, continuous, or both) (what measure?) and extents of the model? Why they were chosen?} \autocite{grimm2010,grimm2020}}
+    \item[\gdorange{\arrowbullet}] \gdorange{\textbf{Are there any other dimensions represented? How?} \autocite{grimm2020}}
+  \end{tcbitemize}
+\end{tcolorbox}
 
 Curabitur blandit tempus ardua ridiculus sed magna. Sed haec quis possit intrepidus aestimare tellus. Quisque ut dolor gravida, placerat libero vel, euismod. Plura mihi bona sunt, inclinet, amari petere vellent \autocite{grimm2006b}.
 

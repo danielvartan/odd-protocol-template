@@ -9,7 +9,7 @@
 # <https://github.com/paleolimbot/rbbt/issues/47>). If not, install `rbbt`
 # from @wmoldham fork `remotes::install_github("wmoldham/rbbt", force = TRUE)`.
 
-rutils:::bbt_write_quarto_bib(
+quartor:::bbt_write_quarto_bib(
   bib_file = here::here("references.bib"),
   dir = c("."),
   pattern = "\\.tex",

@@ -1,3 +1,7 @@
+% ----- `tcolorbox` Settings -----
+
+% Create Info Icon & Arrow Bullet Point -----
+
 \newcommand{\arrowbullet}[1][]{
   \begin{tikzpicture}[#1]
     \draw[-{Triangle[width=6.75pt,length=3pt]},
@@ -12,6 +16,8 @@
 \end{tikzpicture}
 }
 
+% Create a New `itemize` Enviroment Using the `enumitem' Package -----
+
 \newlist{tcbitemize}{itemize}{1}
 \setlist[tcbitemize]{
   leftmargin=0.6cm,
@@ -19,9 +25,32 @@
   labelsep=0.1cm,
   itemsep=0pt
 }
+
 \setlist[tcbitemize,1]{label=\arrowbullet}
 
-\tcbset{
+% Create `tcolorbox' for The Citation Data -----
+
+\newtcolorbox{citationbox}{
+  colframe=gdblack,
+  colback=white,
+  % opacityback=0,
+  sharp corners,
+  boxrule=0.5pt,
+  boxsep=0cm,
+  left=0.6cm,
+  right=0.6cm,
+  top=0.6cm,
+  bottom=0.6cm,
+  fontupper=\linespread{1.5}\small\selectfont,
+  halign=justify,
+  before skip={\smallskipamount},
+  after skip={\smallskipamount},
+  before upper={\noindent}
+}
+
+% Create `tcolorbox' for The Guiding Questions -----
+
+\newtcolorbox{guidingbox}{
   skin=enhanced,
   colframe=gdlightgreyc,
   colback=white,
@@ -34,12 +63,11 @@
   right=0.3cm,
   top=0.3cm,
   bottom=0.3cm,
-  fontupper=\linespread{1.15}\selectfont,
+  fontupper=\linespread{1.5}\selectfont,
   halign=justify,
-  before skip={\medskipamount},
-  after skip={\medskipamount},
+  before skip={0\baselineskip},
+  after skip={\smallskipamount},
   before upper={
-    \begingroup
       \hypersetup{hidelinks}
       \begin{tabular}{m{0.75cm}l}
         \gdblack{\infoicon} &
@@ -48,6 +76,22 @@
   after upper={
         \end{minipage}
       \end{tabular}
-    \endgroup
   }
 }
+
+\AtBeginEnvironment{guidingbox}{
+  \leavevmode\vspace*{-0.25\baselineskip}
+}
+
+% Guiding Box Template:
+
+% \begin{guidingbox}
+%   \begin{tcbitemize}
+%     \item[\gddarkredb{\arrowbullet}] \gddarkredb{\textbf{PLACEHOLDER} \autocite{grimm2010,grimm2020,railsback2019a,muller2013}}
+%     \item[\gddarkcornflowerblueb{\arrowbullet}] \gddarkcornflowerblueb{\textbf{PLACEHOLDER} \autocite{grimm2010,grimm2020,railsback2019a,muller2013}}
+%     \item[\gddarkgreenb{\arrowbullet}] \gddarkgreenb{\textbf{PLACEHOLDER} \autocite{grimm2010,grimm2020,railsback2019a,muller2013}}
+%     \item[\gddarkpurpleb{\arrowbullet}] \gddarkpurpleb{\textbf{PLACEHOLDER} \autocite{grimm2010,grimm2020,railsback2019a,muller2013}}
+%     \item[\gddarkorangeb{\arrowbullet}] \gddarkorangeb{\textbf{PLACEHOLDER} \autocite{grimm2010,grimm2020,railsback2019a,muller2013}}
+%     \item[\gddarkyellowb{\arrowbullet}] \gddarkyellowb{\textbf{PLACEHOLDER} \autocite{grimm2010,grimm2020,railsback2019a,muller2013}}
+%   \end{tcbitemize}
+% \end{guidingbox}

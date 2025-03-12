@@ -9,21 +9,21 @@
 
 🕹️🤖🧑‍🤝‍🧑🔄✨🌀🌍️🔎🔗🕸⏳
 
-This repository provides a [LaTeX](https://www.latex-project.org/) template for the ODD protocol, developed by Volker Grimm et al. ([2006](https://www.sciencedirect.com/science/article/pii/S0304380006002043), [2020](https://www.doi.org/10.18564/jasss.4259)). It aims to facilitate the use of the ODD protocol in technical and academic writing.
+This repository offers a [LaTeX](https://www.latex-project.org/) template for the ODD protocol, a widely used standard for structuring and documenting Agent-Based Models (ABMs), developed by Volker Grimm et al. ([2006](https://www.sciencedirect.com/science/article/pii/S0304380006002043), [2020](https://www.doi.org/10.18564/jasss.4259)). Designed to streamline the adoption of ODD in technical and academic writing, this template provides a structured and visually intuitive framework.
 
-The template is based on LaTeX [`apa7`](https://ctan.org/pkg/apa7) class and adheres to the formatting guidelines of the American Psychological Association ([APA](https://apastyle.apa.org/)) for manuscripts and bibliographical references.
+Built on the LaTeX [`apa7`](https://ctan.org/pkg/apa7) class, the template ensures compliance with the formatting guidelines of the American Psychological Association ([APA](https://apastyle.apa.org/)) for manuscripts and bibliographic references.
 
-To enhance clarity, **guiding questions** are presented at the beginning of each section, with **color-coding** for easy reference. These questions are drawn from Grimm et al. ([2010](https://www.doi.org/10.1016/j.envsoft.2010.03.021), [2020](https://www.doi.org/10.18564/jasss.4259)), Müller et al. ([2013](https://doi.org/10.1016/j.envsoft.2013.06.003)), and Railsback and Grimm ([2019](https://www.springer.com/gp/book/9783030041673)).
+To enhance clarity and usability, each section begins with **guiding questions**, highlighted using **color-coding** for quick reference. These questions are drawn from key sources, including Grimm et al. ([2010](https://www.doi.org/10.1016/j.envsoft.2010.03.021), [2020](https://www.doi.org/10.18564/jasss.4259)), Müller et al. ([2013](https://doi.org/10.1016/j.envsoft.2013.06.003)), and Railsback & Grimm ([2019](https://www.springer.com/gp/book/9783030041673)).
 
-Additionally, the template includes placeholder texts with examples from Grimm et al. ([2020](https://www.doi.org/10.18564/jasss.4259)) to further assist users, along with a visual and summarized version of the protocol, known as *Visual ODD* (Szangolies, [2024](https://www.jasss.org/27/4/1.html)).
+The template also includes placeholder texts with examples from Grimm et al. ([2020](https://www.doi.org/10.18564/jasss.4259)) to assist users in structuring their models. Additionally, it features a concise, visual summary of the protocol—*Visual ODD* (Szangolies, [2024](https://www.jasss.org/27/4/1.html))—for an alternative, more intuitive representation.
 
-To maintain the template's general applicability, some questions from the extended ODD+D version proposed by Müller et al. ([2013](https://doi.org/10.1016/j.envsoft.2013.06.003)) were not included. Redundant questions were also removed or merged. These questions can be found in the appendix.
+To keep the template broadly applicable, some elements from the extended ODD+D version proposed by Müller et al. ([2013](https://doi.org/10.1016/j.envsoft.2013.06.003)) were omitted. Redundant or overlapping questions were consolidated. These missing questions remains available in the appendix.
 
 ## Formats
 
 The template is available in two formats:
 
-- **LaTeX**: The primary format, available in this repository
+- **LaTeX**: The primary format, available in this repository.
 - **Google Docs**: Click [here](https://docs.google.com/document/d/1_oAGdrshKgWNWvXFXenaJSPeWxKhw0oOo9XzKpd2cXM/edit?usp=sharing) to access the template.
 
 ## License
